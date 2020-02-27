@@ -48,7 +48,8 @@ def function_candidate(data):
             {'email':"naveen.c@darwinbox.in"},
             {'email':"qwertykeypad9079@gmail.com"}
             ],
-        'conferenceData':data
+        "guestsCanSeeOtherGuests": false,
+        'conferenceData':data,
         }
     event = service.events().insert(calendarId='primary', body=event1,sendUpdates="all",supportsAttachments=True,conferenceDataVersion=1).execute()
     print(event['conferenceData']['entryPoints'])  
